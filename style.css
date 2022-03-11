@@ -1,0 +1,611 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   text-decoration: none;
+}
+
+section {
+   padding: 50px 0;
+}
+
+.container {
+   max-width: 1300px;
+   margin: 0 auto;
+   padding: 0 80px;
+}
+
+/* ===== НАВИГАЦИЯ ==== */
+
+.navbar {
+   position: fixed;
+   padding: 30px 0;
+   left: 0;
+   top: 0;
+   width: 100%;
+   z-index: 100;
+   font-family: 'Ubuntu', sans-serif;
+}
+
+.navbar .container {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.navbar .logo a {
+   font-size: 35px;
+   font-weight: 600;
+   color: white;
+}
+
+.navbar .menu li {
+   list-style: none;
+   display: inline-block;
+}
+
+
+.navbar .menu li a {
+   color: white;
+   font-size: 20px;
+   font-weight: 500;
+   margin: 0 20px;
+   transition: .3s;
+}
+
+.navbar .menu li a:hover {
+   color:darkorchid;
+}
+
+.navbar.sticky {
+   padding: 30px 0;
+   background-color: cadetblue;
+}
+
+.logo a span {
+   color:lightsalmon;
+}
+
+/* СТИЛИЗАЦИЯ КНОПКИ */
+.menu-btn {
+   color: white;
+   font-size: 23px;
+   cursor: pointer;
+   display: none;
+}
+
+.scroll-up {
+   position: fixed;
+   height: 45px;
+   width: 42px;
+   background-color: crimson;
+   right: 30px;
+   bottom: 10px;
+   text-align: center;
+   line-height: 45px;
+   color: white;
+   z-index: 9999;
+   font-size: 30px;
+   cursor: pointer;
+   border-radius: 6px;
+   opacity: 0;
+   pointer-events: none;
+   transition: .3s ease-in;
+}
+
+.scroll-up.show {
+   bottom: 30px;
+   opacity: 1;
+   pointer-events: auto;
+}
+
+/*==== ГЛАВНЫЙ ЭКРАН ===== */
+.home {
+   width: 100%;
+   background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(img/home-bg.jpg) center no-repeat;
+   background-size: cover;
+   height: 100vh;
+   min-height: 500px;
+   display: flex;
+   font-family: 'Ubuntu', sans-serif;
+   color: white;
+}
+
+.home .container {
+   margin: auto 50px auto 0;
+}
+
+.home-content {
+margin-top: 50px
+}
+
+
+.home-content .text-1 {
+   font-size: 27px;
+}
+
+.home-content .text-2 {
+   font-size: 65px;
+   font-weight: 600;
+   margin-left: -3px;
+}
+
+.home-content .text-3 {
+   font-size: 35px;
+   margin: 5px 0;
+}
+
+.text-3 span {
+   color: red;
+   font-weight: 500;
+}
+
+/* ======================== ОБО МНЕ =============================== */
+.about {
+   font-family: 'Poppins', sans-serif;
+}
+
+.about-title,
+.skills-title,
+.projects-title,
+.contacts-title {
+   position: relative;
+   text-align: center;
+   font-family: 'Ubuntu', sans-serif;
+   font-size: 40px;
+   font-weight: 500;
+   margin-bottom: 60px;
+   padding-bottom: 20px;
+}
+
+.about-title::before,
+.skills-title::before,
+.projects-title::before,
+.contacts-title::before {
+   position: absolute;
+   content: '';
+   width: 180px;
+   height: 4px;
+   background-color: black;
+   bottom: 0;
+   left: 50%;
+   transform: translateX(-50%);
+}
+
+.about-title::after,
+.skills-title::after,
+.projects-title::after {
+   position: absolute;
+   content: 'Кто я?';
+   color:crimson;
+   font-size: 20px;
+   padding: 5px;
+   background-color: white;
+   bottom: -12px;
+   left: 50%;
+   transform: translateX(-50%);
+}
+
+.about .about-content,
+.skills .skills-content {
+display: flex;
+align-items: center;
+justify-content: space-between;
+flex-wrap: wrap;
+}
+
+.about .about-content .left {
+width: 45%;
+}
+
+.about .about-content .left img {
+   height: 400px;
+   width: 400px;
+   object-fit: cover;
+}
+
+.about .about-content .right {
+   width: 55%;
+   }
+
+   .about .about-content .right .about-text {
+      font-size: 25px;
+      font-weight: 600;
+      margin-bottom: 10px;
+   }
+
+   .about .about-content .right p {
+      text-align: justify;
+   }
+
+   /* ================ НАВЫКИ ======================= */
+   .skills-title::after {
+      content: 'Что я знаю?';
+   }
+
+   .skills .skills-content .column {
+      width: calc(50% - 30px);
+   }
+
+   .skills .skills-content .left .text {
+      font-size: 25px;
+      font-weight: 600;
+      margin-bottom: 10px;
+   }
+
+   .skills .skills-content .right .bars {
+      margin-bottom: 15px;
+   }
+
+   .skills .skills-content .right .info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 5px;
+   }
+
+   .skills .skills-content .right  span {
+      font-weight: 600;
+      font-size: 18px;
+   }
+
+   .skills .skills-content .right .line {
+      height: 5px;
+      width: 100%;
+      background-color: lightgrey;
+      position: relative;
+   }
+
+   .skills .skills-content .right .line::before {
+      content: '';
+      position: absolute;
+      width: 80%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background-color: crimson;
+   }
+
+   .skills .skills-content .right .html::before {
+      width: 90%;
+   }
+
+   .skills .skills-content .right .css::before {
+      width: 88%;
+   }
+
+   .skills .skills-content .right .javascript::before {
+      width: 50%;
+   }
+
+   .skills .skills-content .right .jquery::before {
+      width: 60%;
+   }
+
+   .skills .skills-content .right .photoshop::before {
+      width: 70%;
+   }
+
+   .skills .skills-content .right .figma::before {
+      width: 62%;
+   }
+
+   .skills .skills-content .left p {
+      text-align: justify;
+      font-family: 'Poppins', sans-serif;
+      font-size: 17px;
+   }
+
+   /* ================ ПРОЕКТЫ ======================== */
+   .projects .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      
+   }
+
+   .filter-gallery {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+   }
+
+   .filter-btn {
+      font-size: 20px;
+      font-weight: 500;
+      color: black;
+      text-transform: uppercase;
+      cursor: pointer;
+      margin: 0 10px 20px;
+   }
+
+   .active-filter {
+      background-color: blueviolet;
+      color: white;
+      padding: 5px;
+   }
+
+   
+   .projects-inner {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 50px;
+   }
+
+   .project-box {
+      box-shadow: 7px 7px 20px rgba(0,0,0,0.2);
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+   }
+
+   .project-box:hover .project-desc {
+      right: 0;
+   }
+
+   .project-img {
+      width: 100%;
+      max-width: 100%;
+      height: 250px;
+      object-fit: cover;
+      object-position: center;
+      position: relative;
+   }
+
+   .project-desc {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      right: 100%;
+      top: 0;
+      color: white;
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.2));
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      text-align: center;
+      transition: .3s;
+   }
+
+   .project-desc h3 {
+      font-size: 25px;
+      max-width: 200px;
+   }
+
+   .project-desc a {
+      color: white;
+      margin-top: 10px;
+      font-size: 20px;
+      font-weight: 700;
+      padding: 5px;
+      background-color: coral;
+   }
+   
+   .projects-title::after {
+      content: 'Мои работы';
+   }
+
+   /* КОНТАКТЫ */
+   .contacts-title::after {
+      content:"\f2c2";
+      position: absolute;
+      font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
+      margin: auto;
+      display: inline-block;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 45px;
+      background-color: white;
+      width: 50px;
+   }
+
+   .contact-body {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      align-items: center;
+   }
+
+   .contact-box {
+      width: 23%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      margin-bottom: 20px;
+   }
+
+   .contact-box:hover {
+      transform: scale(1.2);
+   }
+
+   .contact-box i {
+      font-size: 50px;
+      color: white;
+      margin-bottom: 30px;
+   }
+
+   
+
+   .contact-box a {
+      color: white;
+      font-size: 26px;
+      font-weight: 700;
+      transition: .3s;
+   }
+
+   
+ 
+
+
+
+
+
+
+
+
+
+/* ==============АДАПТИВ================= */
+@media (max-width: 1300px) {
+.home .container {
+   margin-left: 0px;
+}
+}
+
+@media (max-width: 1104px) {
+   .about .about-content .left img {
+      height: 350px;
+      width: 350px;
+   }
+}
+
+
+@media (max-width: 991px) {
+   .container {
+      padding: 0 40px;
+   }
+  
+}
+
+@media (max-width: 947px) {
+   .container {
+      padding: 0 30px;
+   }
+
+   .navbar .menu {
+      position: fixed;
+      background-color: black;
+      height: 100vh;
+      width: 100%;
+      left: -100%;
+      top: 0;
+      text-align: center;
+      padding-top: 80px;
+   }
+
+   .navbar .menu.active {
+      left: 0;
+   }
+
+   .navbar .menu li {
+      display: block;
+   }
+
+   .navbar .menu li a {
+      display: inline-block;
+      margin: 20px 0;
+      font-size: 25px;
+   }
+
+   .menu-btn {
+      display: block;
+      z-index: 999;
+   }
+
+   .menu-btn i.active:before {
+      content: "\f00d";
+   }
+
+   .home-content .text-2 {
+      font-size: 50px;
+   }
+   
+   .home-content .text-3 {
+      font-size: 30px;
+   }
+
+   .container {
+      max-width: 800px;
+   }
+
+   .about .about-content .column {
+      width: 100%;
+   }
+
+   .about .about-content .left {
+      display: flex;
+      justify-content: center;
+      margin: 0 auto 60px;
+   }
+
+   .about .about-content .right {
+      width: 100%;
+   }
+
+   .skills .skills-content .column {
+      width: 100%;
+   }
+
+   .skills .skills-content .right {
+      order: 1;
+      margin-bottom: 10px;
+   }
+
+   .skills .skills-content .left {
+      order: 2;
+   }
+
+}
+
+@media (max-width: 690px) {
+   .container {
+      padding: 0 30px;
+   }
+
+   .home-content .text-2 {
+      font-size: 45px;
+   }
+   
+   .home-content .text-3 {
+      font-size: 25px;
+   }
+
+   .skills .skills-content .column {
+      width: 100%;
+   }
+
+   .skills .skills-content .right {
+      order: 1;
+      margin-bottom: 10px;
+   }
+
+   .skills .skills-content .left {
+      order: 2;
+   }
+
+   .contact-body .column {
+      width: 100%;
+   }
+
+
+}
+
+@media (max-width: 500px) {
+   
+   .home-content .text-2 {
+      font-size: 40px;
+   }
+   
+   .home-content .text-3 {
+      font-size: 25px;
+   }
+
+   .contact-box i {
+      font-size: 40px;
+   }
+
+   .contact-box a {
+      color: white;
+      font-size: 20px;
+   }
+   
+}

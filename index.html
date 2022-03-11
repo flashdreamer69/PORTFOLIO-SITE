@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>PORTFOLIO SITE</title>
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+   <link rel="stylesheet" href="style.css">
+   <style>
+      .color-change-2x {
+         animation: color-change-2x 2s linear infinite alternate both;
+      }
+
+      @keyframes color-change-2x {
+         0% {
+            background: #19dcea;
+         }
+
+         100% {
+            background: #b22cff;
+         }
+      }
+
+   </style>
+</head>
+
+<body>
+
+   <!-- НАВИГАЦИЯ -->
+   <div class="scroll-up">
+      <i class="fas fa-angle-up"></i>
+   </div>
+
+   <nav class="navbar">
+      <div class="container">
+         <div class="logo"><a href="">Портфо<span>лио</span></a></div>
+         <ul class="menu">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="#about">Обо мне</a></li>
+            <li><a href="#skills">Навыки</a></li>
+            <li><a href="#projects">Портфолио</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+         </ul>
+         <div class="menu-btn">
+            <i class="fas fa-bars"></i>
+         </div>
+      </div>
+   </nav>
+
+   <!-- Главный экран -->
+   <section class="home" id="home">
+      <div class="container">
+         <div class="home-content">
+            <div class="text-1">Приветствую, меня зовут</div>
+            <div class="text-2">Елизаров Александр</div>
+            <div class="text-3"><span class="typing"></span></div>
+         </div>
+      </div>
+   </section>
+
+   <!-- ОБО МНЕ -->
+   <section class="about" id="about">
+      <div class="container">
+         <h2 class="about-title">Обо мне</h2>
+         <div class="about-content">
+
+            <div data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine" class="column left">
+               <img src="img/about.jpg" alt="">
+            </div>
+
+            <div class="column right">
+               <div class="about-text">Я <span>HTML-верстальщик</span> и <span>frontend-разработчик</span></div>
+               <p>Живу в Москве. Верстка сайтов сразу увлекла, потому что люблю воспринимать визуально + нравится сама структура сайтов, динамика элементов, цвета, красивые шрифты. Исследую ее уже в течении года и постоянно практикую что-то новое. Помимо верстки нахожу время для творчества (игра на укулеле) и посещения интересных мест.</p>
+            </div>
+
+         </div>
+      </div>
+   </section>
+
+   <!-- НАВЫКИ -->
+   <section class="skills" id="skills">
+      <div class="container">
+         <h2 class="skills-title">Мои навыки</h2>
+         <div class="skills-content">
+
+            <div class="column left">
+               <div class="text">Мои навыки и умения</div>
+               <p>У меня адаптивная валидная верстка с необходимыми комментариями. Неплохо знаю основы HTML/CSS. Для улучшения качества и скорости выполнения использую Bootstrap, динамические элементы на сайте реализовываю в основном на Jquery и частично на Javascript. Периодически использую качественные готовые плагины. Также умею работать с макетами в Figma и Photoshop - нарезка изображений из макета, экспорт стилей для ускоренной верстки. Готовый код заливаю в репозитории на GitHub.</p>
+            </div>
+
+            <div class="column right">
+
+               <div class="bars">
+                  <div class="info">
+                     <span>HTML</span>
+                     <span>90%</span>
+                  </div>
+                  <div class="line html"></div>
+               </div>
+
+               <div class="bars">
+                  <div class="info">
+                     <span>CSS</span>
+                     <span>88%</span>
+                  </div>
+                  <div class="line css"></div>
+               </div>
+
+               <div class="bars">
+                  <div class="info">
+                     <span>JAVASCRIPT</span>
+                     <span>50%</span>
+                  </div>
+                  <div class="line javascript"></div>
+               </div>
+
+               <div class="bars">
+                  <div class="info">
+                     <span>JQUERY</span>
+                     <span>60%</span>
+                  </div>
+                  <div class="line jquery"></div>
+               </div>
+
+               <div class="bars">
+                  <div class="info">
+                     <span>BOOTSTRAP</span>
+                     <span>70%</span>
+                  </div>
+                  <div class="line bootstrap"></div>
+               </div>
+
+               <div class="bars">
+                  <div class="info">
+                     <span>ADOBE PHOTOSHOP</span>
+                     <span>70%</span>
+                  </div>
+                  <div class="line photoshop"></div>
+               </div>
+
+               <div class="bars">
+                  <div class="info">
+                     <span>FIGMA</span>
+                     <span>62%</span>
+                  </div>
+                  <div class="line figma"></div>
+               </div>
+
+
+            </div>
+
+         </div>
+      </div>
+   </section>
+
+   <!-- ПРОЕКТЫ -->
+   <section class="projects" id="projects">
+      <div class="container">
+         <h2 class="projects-title">Портфолио</h2>
+
+         <div class="filter-gallery">
+            <span class="filter-btn active-filter" data-filter="all">Все</span>
+            <span class="filter-btn" data-filter="landing">Лендинги</span>
+            <span class="filter-btn" data-filter="internet">Интернет-магазин</span>
+            <span class="filter-btn" data-filter="blog">Блог</span>
+            <span class="filter-btn" data-filter="bootstrap">BOOTSTRAP</span>
+         </div>
+
+         <div class="projects-inner" id="projects">
+
+            <div class="project-box landing">
+               <img src="img/project-1.jpg" class="project-img" alt="">
+               <div class="project-desc">
+                  <h3>Сайт агенства</h3>
+                  <a target="_blank" href="https://flashdreamer69.github.io/AGENCY/">Перейти</a>
+               </div>
+            </div>
+
+            <div class="project-box landing">
+               <img src="img/project-2.jpg" class="project-img" alt="">
+               <div class="project-desc">
+                  <h3>Сайт университета</h3>
+                  <a target="_blank" href="https://flashdreamer69.github.io/EDUFORD/">Перейти</a>
+               </div>
+            </div>
+
+            <div class="project-box landing">
+               <img src="img/project-3.jpg" class="project-img" alt="">
+               <div class="project-desc">
+                  <h3>Сайт компьютерного курса</h3>
+                  <a target="_blank" href="https://flashdreamer69.github.io/COMPUTER-SITE/">Перейти</a>
+               </div>
+            </div>
+
+            <div class="project-box landing">
+               <img src="img/project-4.jpg" class="project-img" alt="">
+               <div class="project-desc">
+                  <h3>Сайт фирмы продажи лофтов</h3>
+                  <a target="_blank" href="https://flashdreamer69.github.io/LOFT-SITE/">Перейти</a>
+               </div>
+            </div>
+
+            <div class="project-box blog">
+               <img src="img/project-5.jpg" class="project-img" alt="">
+               <div class="project-desc">
+                  <h3>Личный блог</h3>
+                  <a target="_blank" href="https://flashdreamer69.github.io/BLOG/">Перейти</a>
+               </div>
+            </div>
+
+            <div class="project-box internet bootstrap">
+               <img src="img/project-6.jpg" class="project-img" alt="">
+               <div class="project-desc">
+                  <h3>Сайт фирмы продажи ковров</h3>
+                  <a target="_blank" href="https://flashdreamer69.github.io/CARPETS-SHOP/">Перейти</a>
+               </div>
+            </div>
+
+            <div class="project-box internet">
+               <img src="img/project-7.jpg" class="project-img" alt="">
+               <div class="project-desc">
+                  <h3>Сайт ресторана</h3>
+                  <a target="_blank" href="https://flashdreamer69.github.io/RESTO-CHECKER/">Перейти</a>
+               </div>
+            </div>
+
+         </div>
+
+      </div>
+   </section>
+
+   <!-- КОНТАКТЫ -->
+   <section class="contacts color-change-2x" id="contacts">
+      <div class="container ">
+         <h2 class="contacts-title">Контакты</h2>
+
+         <div class="contact-body">
+
+            <div class="column contact-box">
+               <i class="fa-brands fa-vk"></i>
+               <a target="_blank" href="https://vk.com/funboy">vk.com/funboy</a>
+            </div>
+
+            <div class="column contact-box">
+               <i class="fa-solid fa-phone"></i>
+               <a href="tel:+79160858906">+79160858906</a>
+            </div>
+
+            <div class="column contact-box">
+               <i class="fa fa-envelope" aria-hidden="true"></i>
+               <a href="mailto:flashwunb@yandex.ru">flashwunb@yandex.ru</a>
+            </div>
+
+
+         </div>
+      </div>
+      </div>
+   </section>
+
+
+
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+   <script src="main.js"></script>
+</body>
+
+</html>
